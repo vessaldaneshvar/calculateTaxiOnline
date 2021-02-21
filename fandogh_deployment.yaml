@@ -1,0 +1,12 @@
+kind: InternalService
+name: app
+spec:
+  image: snapp:v3
+  command: 
+    - python
+    - app.py
+  resources:
+    memory: 200Mi
+volume_mounts:  
+   - mount_path: /code/data/
+

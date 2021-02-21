@@ -8,3 +8,4 @@ WORKDIR /code
 # Install dependencies
 COPY . /code/
 RUN pip install -r requirements.txt
+ENTRYPOINT [ "python" , "app.py" ]
