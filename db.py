@@ -19,7 +19,7 @@ class Price(Base):
 
 
 
-engine = create_engine("sqlite:///db.sqlite")
+engine = create_engine("sqlite:///data/db.sqlite")
 session = sessionmaker()
 session.configure(bind=engine)
 Base.metadata.create_all(engine)

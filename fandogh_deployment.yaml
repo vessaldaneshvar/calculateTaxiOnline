@@ -1,7 +1,7 @@
 kind: InternalService
 name: app
 spec:
-  image: snapp:v3
+  image: snapp:v5
   command: 
     - python
     - app.py
