@@ -1,5 +1,3 @@
-import os
-import sys
 from sqlalchemy.ext.declarative import declarative_base
 from sqlalchemy.orm import relationship, sessionmaker
 from sqlalchemy import create_engine
@@ -18,8 +16,8 @@ class Price(Base):
     destinationLong = Column(String(200))
 
 
-
-engine = create_engine("sqlite:///data/db.sqlite")
-session = sessionmaker()
-session.configure(bind=engine)
-Base.metadata.create_all(engine)
+if __name__ == "__main__":
+    engine = create_engine("sqlite:///data/db.sqlite")
+    session = sessionmaker()
+    session.configure(bind=engine)
+    Base.metadata.create_all(engine)
